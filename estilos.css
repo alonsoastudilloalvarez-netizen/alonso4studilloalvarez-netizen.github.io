@@ -1,0 +1,380 @@
+/* estilos.css
+   Conectate Seguro - pagina de Alonso
+   Liceo Comercial de Los Andes
+   Tema oscuro: rojo sobre negro
+
+   Rojos, del mas oscuro al mas claro:
+     #7F1D1D  rojo vino
+     #A32222  rojo profundo
+     #C43A3A  rojo medio
+     #F04747  rojo vivo (el principal)
+     #FF8A8A  rojo claro, para texto sobre negro
+
+   Negros y grises:
+     #0D0A0B  fondo de la pagina
+     #150E11  fondo de las cajas
+     #241A1D  cajas mas claras
+     #3A2226  bordes
+     #EDE7E8  texto
+     #A2969A  texto secundario
+*/
+
+/* el asterisco alcanza a todas las etiquetas;
+   border-box evita que el padding agrande los bloques */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Trebuchet MS", Tahoma, Arial, sans-serif;
+  background-color: #0D0A0B;
+  color: #EDE7E8;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* === encabezado === */
+
+#portada {
+  background-color: #150E11;
+  border-bottom: 7px solid #F04747;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 44px 20px 36px 20px;
+}
+
+#portada h1 {
+  margin: 0;
+  font-size: 40px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.frase {
+  margin: 10px 0 0 0;
+  color: #FF8A8A;
+  font-size: 17px;
+}
+
+.lugar {
+  margin: 14px 0 0 0;
+  color: #A2969A;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+
+/* === menu === */
+
+#barra {
+  background-color: #150E11;
+  border-bottom: 1px solid #3A2226;
+  text-align: center;
+  padding: 0 16px;
+}
+
+#barra ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* inline-block deja los items en una fila y los baja solos si no caben */
+#barra li {
+  display: inline-block;
+}
+
+#barra a {
+  display: inline-block;
+  color: #EDE7E8;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 16px 18px;
+  border-bottom: 4px solid #150E11;
+}
+
+#barra a:hover {
+  color: #FF8A8A;
+  border-bottom-color: #F04747;
+}
+
+
+/* === cuerpo === */
+
+/* margin: 0 auto centra la columna de contenido */
+main {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 30px 22px 50px 22px;
+}
+
+section {
+  margin-bottom: 26px;
+}
+
+/* las secciones con esta clase van sobre un fondo un poco mas
+   claro que el de la pagina, para que se note el cambio de tema */
+.marco {
+  background-color: #150E11;
+  border: 1px solid #3A2226;
+  border-radius: 14px;
+  padding: 2px 26px 20px 26px;
+}
+
+h2 {
+  color: #FFFFFF;
+  font-size: 24px;
+  margin-top: 30px;
+  margin-bottom: 14px;
+}
+
+/* el numerito que va delante de cada titulo */
+.n {
+  display: inline-block;
+  background-color: #F04747;
+  color: #0D0A0B;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 3px 9px;
+  border-radius: 6px;
+  margin-right: 10px;
+  vertical-align: 4px;
+}
+
+h3 {
+  color: #FF8A8A;
+  font-size: 18px;
+  margin-top: 24px;
+  margin-bottom: 6px;
+}
+
+a {
+  color: #FF8A8A;
+}
+
+a:hover {
+  color: #FFFFFF;
+}
+
+abbr {
+  border-bottom: 1px dashed #C43A3A;
+  cursor: help;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #3A2226;
+  margin: 26px 0;
+}
+
+
+/* === el ejemplo de contrasena, con del e ins === */
+
+.ejemplo {
+  background-color: #0D0A0B;
+  border: 1px solid #3A2226;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  padding: 14px 10px;
+}
+
+/* del marca lo que se descarta, ins lo que lo reemplaza */
+del {
+  color: #A2969A;
+}
+
+ins {
+  color: #FF8A8A;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 3px solid #F04747;
+}
+
+
+/* === imagenes === */
+
+.principal,
+.media {
+  margin: 24px 0 0 0;
+  text-align: center;
+}
+
+/* max-width 100% impide que la imagen se salga en pantallas chicas */
+.principal img {
+  width: 620px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 14px;
+}
+
+.media img {
+  width: 420px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 14px;
+}
+
+figcaption {
+  color: #A2969A;
+  font-size: 13px;
+  font-style: italic;
+  margin-top: 7px;
+}
+
+
+/* === listas === */
+
+.buenas {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.buenas li {
+  background-color: #1A1315;
+  border-left: 4px solid #F04747;
+  border-radius: 0 8px 8px 0;
+  padding: 8px 14px;
+  margin-bottom: 7px;
+}
+
+.orden {
+  padding-left: 24px;
+}
+
+.orden li {
+  margin-bottom: 8px;
+}
+
+
+/* === tabla === */
+
+/* border-collapse deja un solo borde entre celda y celda */
+.tabla-riesgo {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 14px;
+  font-size: 15px;
+}
+
+.tabla-riesgo caption {
+  caption-side: top;
+  text-align: left;
+  color: #A2969A;
+  font-size: 13px;
+  padding-bottom: 8px;
+}
+
+.tabla-riesgo th {
+  background-color: #A32222;
+  color: #FFFFFF;
+  text-align: left;
+  padding: 11px 12px;
+}
+
+.tabla-riesgo td {
+  border-bottom: 1px solid #3A2226;
+  padding: 11px 12px;
+  vertical-align: top;
+}
+
+/* la columna del nivel va angosta para que la fila no se estire */
+.alto,
+.medio,
+.bajo {
+  width: 14%;
+  font-weight: bold;
+}
+
+.alto {
+  color: #FF5C5C;
+}
+
+.medio {
+  color: #E8A33D;
+}
+
+.bajo {
+  color: #86C9A0;
+}
+
+
+/* === recuadro de advertencia === */
+
+.aviso {
+  background-color: #2A0F12;
+  border: 2px solid #F04747;
+  border-radius: 14px;
+  padding: 4px 26px 18px 26px;
+  margin-bottom: 26px;
+}
+
+.aviso h2 {
+  color: #FF8A8A;
+  font-size: 21px;
+}
+
+.aviso p {
+  margin: 0 0 10px 0;
+}
+
+
+/* === enlace externo === */
+
+.enlace {
+  display: inline-block;
+  background-color: #F04747;
+  color: #0D0A0B;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 13px 26px;
+  border-radius: 8px;
+}
+
+.enlace:hover {
+  background-color: #FF8A8A;
+  color: #0D0A0B;
+}
+
+.arriba {
+  text-align: right;
+  font-size: 13px;
+}
+
+
+/* === pie === */
+
+#cierre {
+  background-color: #150E11;
+  border-top: 7px solid #F04747;
+  color: #A2969A;
+  text-align: center;
+  font-size: 14px;
+  padding: 26px 20px 22px 20px;
+}
+
+.firma {
+  color: #FFFFFF;
+  font-size: 19px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0 0 6px 0;
+}
+
+/* address viene en cursiva por defecto */
+#cierre address {
+  font-style: normal;
+  margin-bottom: 10px;
+}
+
+#cierre p {
+  margin: 0;
+}
